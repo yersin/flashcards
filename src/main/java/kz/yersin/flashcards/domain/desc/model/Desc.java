@@ -29,6 +29,7 @@ public class Desc implements Serializable {
     private String username;
 
     private String title;
+
     private boolean enabled;
 
 }
