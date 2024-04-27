@@ -25,20 +25,20 @@ public class DescService {
     }
 
     public Desc findById(final Integer id) {
-        Optional<Desc> user = repository.findById(id);
-        return user.orElseThrow(() -> new NotFoundException("Desc not found with id: " + id));
+        Optional<Desc> desc = repository.findById(id);
+        return desc.orElseThrow(() -> new NotFoundException("Desc not found with id: " + id));
     }
 
-    public Desc create(final Desc user) {
-        return repository.save(user);
+    public Desc create(final Desc desc) {
+        return repository.save(desc);
     }
 
-    public Desc update(final Desc user) {
-        return repository.save(user);
+    public Desc update(final Desc desc) {
+        return repository.save(desc);
     }
 
-    public void delete(final Desc user) {
-        repository.delete(user);
+    public void delete(final Desc desc) {
+        repository.delete(desc);
     }
 
     public Page<Desc> findAll(Pageable pageable) {
